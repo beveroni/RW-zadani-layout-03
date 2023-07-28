@@ -19,40 +19,45 @@ aside,
   padding: 20px;
 }
 
-header > :first-child,
-footer > :first-child,
-article > :first-child,
-nav > :first-child,
-.reklama1 > :first-child,
-.reklama2 > :first-child {
+header> :first-child,
+footer> :first-child,
+article> :first-child,
+nav> :first-child,
+.reklama1> :first-child,
+.reklama2> :first-child {
   margin-top: 0;
 }
 
-header > :last-child,
-footer > :last-child,
-article > :last-child,
-nav > :last-child,
-aside > :last-child,
-.reklama1 > :last-child,
-.reklama2 > :last-child {
+header> :last-child,
+footer> :last-child,
+article> :last-child,
+nav> :last-child,
+aside> :last-child,
+.reklama1> :last-child,
+.reklama2> :last-child {
   margin-bottom: 0;
 }
 
 .hlavicka {
   background-color: #2ecc71;
 }
+
 .menu {
   background-color: #e74c3c;
 }
+
 .obsah {
   background-color: #f1c40f;
 }
+
 .reklama1 {
   background-color: #8e44ad;
 }
+
 .reklama2 {
   background-color: mediumturquoise;
 }
+
 .paticka {
   background-color: dodgerblue;
 }
@@ -65,3 +70,31 @@ aside > :last-child,
 	- 640px
 	- 1000px
 */
+
+@media(min-width:1000px) {
+  .kontejner {
+    display: flex;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+  }
+
+  .obsah {
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+  }
+
+  .reklamy {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .reklama1,
+  .reklama2 {
+    flex-basis: 50%;
+  }
+}
